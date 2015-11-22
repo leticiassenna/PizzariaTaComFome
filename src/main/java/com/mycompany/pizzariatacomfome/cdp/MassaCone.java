@@ -5,19 +5,46 @@
  */
 package com.mycompany.pizzariatacomfome.cdp;
 
+import com.mycompany.pizzariatacomfome.util.AbstractMassa;
+
 /**
  *
  * @author 20111BSI0161
  */
-public class MassaCone {
-    private float preco;
+public class MassaCone extends AbstractMassa{
 
-
-    public float getPreco() {
-        return preco;
+    public MassaCone(IPizza pizza) {
+        super(pizza);
+        this.preco = 10;
     }
 
-    public void setPreco(float preco) {
-        this.preco = preco;
+
+    @Override
+    public String toString() {
+        return "Adicao de Massa Cone, Preco final = " + this.getPreco();
+        
     }
+    
+    
+    @Override
+    public void criarMassa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void criarMolho() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void criarIngrediente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pizza fazerPizza() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 }

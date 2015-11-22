@@ -14,5 +14,6 @@ import com.mycompany.pizzariatacomfome.cdp.Pizza;
 public abstract class FabricaPizzaAbstrata {
     Pizza pizza;
     
-    public abstract Pizza criarPizza();
+    public abstract Pizza criarPizza(String nome);
+    public abstract AbstractIngrediente criarIngrediente();
 }

@@ -5,13 +5,20 @@
  */
 package com.mycompany.pizzariatacomfome.cdp;
 
+import com.mycompany.pizzariatacomfome.util.AbstractQueijo;
+
 /**
  *
  * @author 20111BSI0161
  */
-public class Queijo {
+public class Queijo extends AbstractQueijo{
     private String nome;
-    private float preco;
+
+    public Queijo(IPizza pizza, String nome) {
+        super(pizza);
+        this.preco = 1;
+        this.nome = nome;
+    }
 
     
     public String getNome() {
@@ -22,12 +29,33 @@ public class Queijo {
         this.nome = nome;
     }
 
-    public float getPreco() {
-        return preco;
+    
+    @Override
+    public String toString() {
+        return "Adicao de Queijo "+ this.getNome()+ ", Preco final = " + this.getPreco();
+        
+    }
+    
+    
+    @Override
+    public void criarIngrediente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setPreco(float preco) {
-        this.preco = preco;
+    @Override
+    public void criarMassa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void criarMolho() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pizza fazerPizza() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }

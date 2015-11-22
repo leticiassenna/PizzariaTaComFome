@@ -5,6 +5,8 @@
  */
 package com.mycompany.pizzariatacomfome.util;
 
+import com.mycompany.pizzariatacomfome.cdp.IPizza;
+
 
 /**
  *
@@ -12,10 +14,13 @@ package com.mycompany.pizzariatacomfome.util;
  */
 public abstract class AbstractQueijo extends AbstractIngrediente{
 
+    public AbstractQueijo(IPizza pizza) {
+        super(pizza);
+    }
+
    @Override
     public abstract void criarIngrediente();
-
-    @Override
-    public abstract float getPreco();
     
+    
+   
 }

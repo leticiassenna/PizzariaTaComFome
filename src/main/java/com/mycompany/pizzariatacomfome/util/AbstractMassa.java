@@ -5,15 +5,20 @@
  */
 package com.mycompany.pizzariatacomfome.util;
 
+import com.mycompany.pizzariatacomfome.cdp.IPizza;
+
 /**
  *
  * @author 20111BSI0161
  */
 public abstract class AbstractMassa extends AbstractIngrediente{
+
+    public AbstractMassa(IPizza pizza) {
+        super(pizza);
+    }
     
     @Override
     public abstract void criarMassa();
-    
-    @Override
-    public abstract float getPreco();
+   
+   
 }

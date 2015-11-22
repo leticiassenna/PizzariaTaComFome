@@ -13,7 +13,8 @@ import com.mycompany.pizzariatacomfome.cdp.Pizza;
  * @author 20111BSI0161
  */
 public abstract class PizzaAbstrata implements IPizza{
-
+    public float preco;
+    
     @Override
     public abstract void criarMassa();
 

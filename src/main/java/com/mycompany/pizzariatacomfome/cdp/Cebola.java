@@ -5,19 +5,43 @@
  */
 package com.mycompany.pizzariatacomfome.cdp;
 
+import com.mycompany.pizzariatacomfome.util.AbstractIngrediente;
+
 /**
  *
  * @author 20111BSI0161
  */
-public class Cebola {
-    private float preco;
+public class Cebola extends AbstractIngrediente{
 
-
-    public float getPreco() {
-        return preco;
+    public Cebola(IPizza pizza) {
+        super(pizza);
+        this.preco = 3;
+    }
+    
+    @Override
+    public String toString() {
+        return "Adicao de Cebola, Preco final = " + this.getPreco();
+        
     }
 
-    public void setPreco(float preco) {
-        this.preco = preco;
+    @Override
+    public void criarMassa() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void criarMolho() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void criarIngrediente() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Pizza fazerPizza() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

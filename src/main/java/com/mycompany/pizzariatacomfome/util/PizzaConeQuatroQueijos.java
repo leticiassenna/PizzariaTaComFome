@@ -7,7 +7,7 @@ package com.mycompany.pizzariatacomfome.util;
 
 import com.mycompany.pizzariatacomfome.cdp.Cebola;
 import com.mycompany.pizzariatacomfome.cdp.IPizza;
-import com.mycompany.pizzariatacomfome.cdp.MassaTradicional;
+import com.mycompany.pizzariatacomfome.cdp.MassaCone;
 import com.mycompany.pizzariatacomfome.cdp.Molho;
 import com.mycompany.pizzariatacomfome.cdp.Pizza;
 import com.mycompany.pizzariatacomfome.cdp.Presunto;
@@ -17,7 +17,7 @@ import com.mycompany.pizzariatacomfome.cdp.Queijo;
  *
  * @author 20111BSI0161
  */
-public class PizzaQuatroQueijos extends FabricaPizzaAbstrata{
+public class PizzaConeQuatroQueijos extends FabricaPizzaAbstrata{
 
     @Override
     public Pizza criarPizza(String nome) {
@@ -29,11 +29,11 @@ public class PizzaQuatroQueijos extends FabricaPizzaAbstrata{
     @Override
     public AbstractIngrediente criarIngrediente() {
         
-        Pizza pizzaP = this.criarPizza("QuatroQueijos");
+        Pizza pizzaP = this.criarPizza("ConeQuatroQueijos");
         IPizza pizzaFeita = pizzaP;
         AbstractIngrediente pizzaIngredientes;
         
-        pizzaIngredientes = new MassaTradicional(pizzaFeita);
+        pizzaIngredientes = new MassaCone(pizzaFeita);
         System.out.println(""+pizzaIngredientes.toString());
         
         pizzaIngredientes = new Molho(pizzaIngredientes, "MolhoTomate");

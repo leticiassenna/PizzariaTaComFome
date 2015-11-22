@@ -15,34 +15,65 @@ import com.mycompany.pizzariatacomfome.util.PizzaAbstrata;
  * @author 20111BSI0161
  */
 public class Pizza extends PizzaAbstrata{
-    AbstractMassa massaTipo;
-    AbstractMolho molho;
-    AbstractIngrediente ingredientes;
+    private AbstractMassa massaTipo;
+    private AbstractMolho molho;
+    private AbstractIngrediente ingredientes;
+    private String nome;
+    private float preco;
     
+   
+    public String getNome() {
+        return nome;
+    }
 
-    @Override
-    public void criarMassa() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    public AbstractMassa getMassaTipo() {
+        return massaTipo;
+    }
+
+    public void setMassaTipo(AbstractMassa massaTipo) {
+        this.massaTipo = massaTipo;
+    }
+
+    public AbstractMolho getMolho() {
+        return molho;
+    }
+
+    public void setMolho(AbstractMolho molho) {
+        this.molho = molho;
+    }
+
+    public AbstractIngrediente getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(AbstractIngrediente ingredientes) {
+        this.ingredientes = ingredientes;
     }
 
     @Override
-    public void criarMolho() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void criarMassa() {}
 
     @Override
-    public void criarIngrediente() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void criarMolho() {}
+
+    @Override
+    public void criarIngrediente() {}
 
     @Override
     public Pizza fazerPizza() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
     }
 
     @Override
     public float getPreco() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return preco;  
+    }
+    public void setPreco(float preco){
+        this.preco = preco;
     }
     
 }

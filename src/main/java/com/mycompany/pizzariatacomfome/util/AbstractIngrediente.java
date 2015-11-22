@@ -5,6 +5,8 @@
  */
 package com.mycompany.pizzariatacomfome.util;
 
+import com.mycompany.pizzariatacomfome.cdp.IPizza;
+
 
 
 /**
@@ -12,7 +14,25 @@ package com.mycompany.pizzariatacomfome.util;
  * @author 20111BSI0161
  */
 public abstract class AbstractIngrediente extends PizzaAbstrata{
+    protected IPizza decoratedPizza;
+    
+    public AbstractIngrediente (IPizza pizza){        
+        decoratedPizza = pizza;      
+    }
 
+    public IPizza getDecoratedPizza() {
+        return decoratedPizza;
+    }
+
+    public final void setDecoratedPizza(IPizza decoratedPizza) {
+        this.decoratedPizza = decoratedPizza;
+    }
+    
+    @Override
+    public float getPreco(){
+        return (float) (decoratedPizza.getPreco()+ preco);
+    }
+    
     @Override
     public abstract void criarMassa();
 
@@ -22,7 +42,5 @@ public abstract class AbstractIngrediente extends PizzaAbstrata{
     @Override
     public abstract void criarIngrediente();
 
-    @Override
-    public abstract float getPreco();
     
 }
